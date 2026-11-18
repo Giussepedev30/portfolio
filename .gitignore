@@ -1,0 +1,8 @@
+# Local agent/skill tooling, not part of the published site
+.agents/
+.claude/
+.codex/
+.kiro/
+.opencode/
+.impeccable/
+node_modules/

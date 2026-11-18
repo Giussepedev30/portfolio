@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giussepe Taquiri — Software Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Giussepe Taquiri: Software Engineering student at UPC, Backend & Full Stack developer. Projects, experience, skills and CV." />
+  <meta property="og:title" content="Giussepe Taquiri — Portfolio" />
+  <meta property="og:description" content="Software Engineering student @ UPC · Backend & Full Stack Developer · Lima, Peru" />
+  <meta property="og:type" content="website" />
+  <link rel="alternate" hreflang="es" href="../" />
+  <link rel="alternate" hreflang="en" href="./" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0b1020',
+            card: '#111827',
+            accent: '#2563eb',
+            accent2: '#22c55e',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .card { transition: transform .25s ease, box-shadow .25s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+    .nav-link { position: relative; }
+    .nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:#2563eb; transition: width .25s; }
+    .nav-link:hover::after { width:100%; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-ink dark:text-slate-100">
+
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-ink/70 border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a href="#hero" class="font-bold text-lg text-slate-800 dark:text-slate-100">Giussepe<span class="text-accent">.dev</span></a>
+      <button id="menuBtn" class="md:hidden p-2 rounded text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      <ul id="menu" class="hidden md:flex gap-6 text-sm font-medium">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Stack</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="hidden md:flex items-center gap-3">
+        <div role="group" aria-label="Language" class="flex items-center gap-1 text-xs font-semibold">
+          <a href="../" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">ES</a>
+          <a href="./" aria-current="page" class="px-2 py-1 rounded bg-slate-200 dark:bg-slate-800">EN</a>
+        </div>
+        <a href="../cv.pdf" download class="px-4 py-2 rounded-lg bg-accent text-white text-sm font-semibold hover:opacity-90">Download CV</a>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <ul class="flex flex-col gap-3 text-sm font-medium">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="../cv.pdf" download class="inline-block px-4 py-2 rounded-lg bg-accent text-white">Download CV</a></li>
+        <li class="flex items-center gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+          <span class="text-xs font-semibold text-slate-500">Language:</span>
+          <a href="../" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold">ES</a>
+          <a href="./" aria-current="page" class="px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-xs font-semibold">EN</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="scroll-mt-24 max-w-6xl mx-auto px-4 py-20 md:py-28 flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-1">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Giussepe Taquiri</h1>
+      <h2 class="text-xl md:text-2xl text-slate-500 dark:text-slate-300 mt-2">Software Engineering Student @ UPC · Backend & Full Stack Developer</h2>
+      <p class="mt-5 text-slate-600 dark:text-slate-300 max-w-xl">I build web and mobile applications focused on REST APIs, business logic and real-world problems. Interested in SaaS, automation and artificial intelligence. Seeking pre-professional internships (Backend / Full Stack).</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#projects" class="px-5 py-3 rounded-lg bg-accent text-white font-semibold hover:opacity-90">View projects</a>
+        <a href="../cv.pdf" download class="px-5 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download CV (PDF)</a>
+        <a href="mailto:giussepetaquiri@gmail.com" class="px-5 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      </div>
+      <div class="mt-6 flex gap-4 text-sm text-slate-500 dark:text-slate-400">
+        <span>📍 Lima, Peru</span>
+        <a href="https://github.com/Giussepedev30" target="_blank" rel="noopener" class="hover:text-accent">GitHub</a>
+        <a href="https://www.linkedin.com/in/giussepe-taquiri-calderon-0aa7b5338/" target="_blank" rel="noopener" class="hover:text-accent">LinkedIn</a>
+      </div>
+    </div>
+    <div class="flex-shrink-0">
+      <img src="https://avatars.githubusercontent.com/u/215183489?v=4" alt="Giussepe Taquiri" class="w-44 h-44 md:w-60 md:h-60 rounded-full ring-4 ring-accent/30 object-cover shadow-xl" />
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="scroll-mt-24 max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-6">About me</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+        I am a 7th-semester Software Engineering student at Universidad Peruana de Ciencias Aplicadas (UPC). I build web and mobile applications with an emphasis on REST APIs, business logic and solving real-world problems. I am especially interested in SaaS products, automation and artificial intelligence.
+      </p>
+      <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+        I have experience in IT support (Calta S.A.C., 2022–2024) and have worked on academic and personal projects with Java/Spring Boot, Node.js, .NET, Vue.js and Flutter. I am currently seeking pre-professional internships in software development (Backend / Full Stack).
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="scroll-mt-24 max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-8">Tech Stack</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="card bg-white dark:bg-card rounded-xl p-5 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-semibold text-accent mb-3">Backend</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Java</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Spring Boot</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Node.js</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">C#</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">.NET</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">REST APIs</span>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-card rounded-xl p-5 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-semibold text-accent mb-3">Frontend</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">JavaScript</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">TypeScript</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Vue.js</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">React</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">HTML5</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">CSS</span>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-card rounded-xl p-5 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-semibold text-accent mb-3">Mobile</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Flutter</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Android</span>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-card rounded-xl p-5 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-semibold text-accent mb-3">Databases</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">SQL</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">MySQL</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">PostgreSQL</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">SQLite</span>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-card rounded-xl p-5 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-semibold text-accent mb-3">Tools</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Git</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">GitHub</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Postman</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Swagger/OpenAPI</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Jira</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Figma</span>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-card rounded-xl p-5 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-semibold text-accent mb-3">Methodologies</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Scrum</span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">GitFlow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="scroll-mt-24 max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-8">Featured Projects</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="card bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="text-lg font-bold">🛒 Frescapp</h4>
+          <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">Personal</span>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">Web platform that consolidates voice-dictated fresh-product orders for restaurants and shops; generates printable PDFs. React + Vite + Supabase.</p>
+        <div class="flex gap-2 text-xs text-slate-500 mb-4"><span>React</span>·<span>Vite</span>·<span>Supabase</span>·<span>TypeScript</span></div>
+        <a href="https://github.com/Giussepedev30/frescapp-" target="_blank" rel="noopener" class="text-accent font-semibold text-sm hover:underline">View repository →</a>
+      </article>
+      <article class="card bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="text-lg font-bold">🏨 Hospedaje Buenos Aires</h4>
+          <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">Personal</span>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">Hotel and hospitality management system.</p>
+        <div class="flex gap-2 text-xs text-slate-500 mb-4"><span>TypeScript</span></div>
+        <a href="https://github.com/Giussepedev30/hospedaje-buenos-aires" target="_blank" rel="noopener" class="text-accent font-semibold text-sm hover:underline">View repository →</a>
+      </article>
+      <article class="card bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="text-lg font-bold">💰 MeldCash</h4>
+          <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">Personal</span>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">Technical documentation for a personal finance and task management platform.</p>
+        <div class="flex gap-2 text-xs text-slate-500 mb-4"><span>Documentation</span></div>
+        <a href="https://github.com/Giussepedev30/MeldCash" target="_blank" rel="noopener" class="text-accent font-semibold text-sm hover:underline">View repository →</a>
+      </article>
+      <article class="card bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="text-lg font-bold">🌼 Personal Website</h4>
+          <span class="text-xs px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">Web</span>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">Floral-themed website built as a web development project. Published on GitHub Pages.</p>
+        <div class="flex gap-2 text-xs text-slate-500 mb-4"><span>HTML</span>·<span>CSS</span>·<span>JS</span></div>
+        <a href="https://Giussepedev30.github.io" target="_blank" rel="noopener" class="text-accent font-semibold text-sm hover:underline">View site →</a>
+      </article>
+      <article class="card bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="text-lg font-bold">🩺 MediCore (fork)</h4>
+          <span class="text-xs px-2 py-1 rounded bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300">Fork</span>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">REST API for a medical management system using Java and Spring Boot.</p>
+        <div class="flex gap-2 text-xs text-slate-500 mb-4"><span>Java</span>·<span>Spring Boot</span></div>
+        <a href="https://github.com/Giussepedev30/medicore-backend" target="_blank" rel="noopener" class="text-accent font-semibold text-sm hover:underline">View repository →</a>
+      </article>
+    </div>
+
+    <h4 class="text-2xl font-bold mt-12 mb-4">Academic Projects (UPC)</h4>
+    <ul class="space-y-3">
+      <li class="bg-white dark:bg-card rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+        <span class="font-semibold">SmartFlow</span>: IoT monitoring solution. Backend with C#, .NET and SQL.
+      </li>
+      <li class="bg-white dark:bg-card rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+        <span class="font-semibold">AutoMatch</span>: REST APIs with Spring Boot, Ratings & Reputation module, integration with Android and Flutter apps.
+      </li>
+      <li class="bg-white dark:bg-card rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+        <span class="font-semibold">TuCash</span>: personal finance app with expense tracking, analytics dashboard and WCAG accessibility improvements.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="scroll-mt-24 max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-8">Experience</h3>
+    <div class="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+        <h4 class="text-lg font-bold">IT Support Technician · Calta S.A.C.</h4>
+        <span class="text-sm text-slate-500">Jan 2022 – Dec 2024 · Lima, Peru</span>
+      </div>
+      <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1 text-sm">
+        <li>Hardware and software support, equipment setup and troubleshooting.</li>
+        <li>Network connectivity and maintenance of workstations, printers and devices.</li>
+        <li>First-level support and documentation of incidents and resolutions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="scroll-mt-24 max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-8">Education & Certifications</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-bold">Universidad Peruana de Ciencias Aplicadas (UPC)</h4>
+        <p class="text-sm text-slate-500 mt-1">B.S. in Software Engineering · 7th semester (in progress) · Lima, Peru</p>
+      </div>
+      <div class="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-bold mb-2">Certifications</h4>
+        <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+          <li>• Google Cybersecurity Certificate · Coursera (2026)</li>
+          <li>• Using Python to Access Web Data · University of Michigan (2025)</li>
+          <li>• Python Data Structures · University of Michigan (2025)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Stats -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-8">GitHub Stats</h3>
+    <div class="flex flex-col md:flex-row gap-4 items-center justify-center flex-wrap">
+      <img src="https://github-readme-stats.vercel.app/api?username=Giussepedev30&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats" class="max-w-full" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Giussepedev30&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" class="max-w-full" />
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="scroll-mt-24 max-w-6xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-6">Contact</h3>
+    <div class="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-slate-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <p class="text-slate-600 dark:text-slate-300">Have an opportunity or want to collaborate? Write to me.</p>
+        <p class="text-sm text-slate-500 mt-1">giussepetaquiri@gmail.com</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="mailto:giussepetaquiri@gmail.com" class="px-5 py-3 rounded-lg bg-accent text-white font-semibold hover:opacity-90">Email</a>
+        <a href="https://www.linkedin.com/in/giussepe-taquiri-calderon-0aa7b5338/" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
+        <a href="https://github.com/Giussepedev30" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm text-slate-500">
+    <p>© 2026 Giussepe Taquiri. Built with HTML, Tailwind and ❤️. Deployed on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const setMenu = (open) => {
+      mobileMenu.classList.toggle('hidden', !open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+    };
+    menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+</html>
